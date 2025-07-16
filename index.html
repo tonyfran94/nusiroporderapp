@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drink Order App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧃 Order Your Drink</h1>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="drink-options" class="drink-label">Choose a drink:</label>
+        <section id="drink-options" class="drink-options" role="listbox" aria-label="Drink options">
+          <div class="drink-category">
+            <h2>Milk Tea</h2>
+            <button type="button" class="drink-btn" data-drink="Classic Milk Tea" data-price="150" aria-label="Classic Milk Tea, Rs 150">
+              <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=200&q=80" alt="Classic Milk Tea" class="drink-img" />
+              Classic Milk Tea<br><span class="price">Rs 150</span>
+            </button>
+            <button type="button" class="drink-btn" data-drink="Earl Grey Milk Tea" data-price="160" aria-label="Earl Grey Milk Tea, Rs 160">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" alt="Earl Grey Milk Tea" class="drink-img" />
+              Earl Grey Milk Tea<br><span class="price">Rs 160</span>
+            </button>
+            <button type="button" class="drink-btn" data-drink="Oolong Milk Tea" data-price="170" aria-label="Oolong Milk Tea, Rs 170">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Oolong Milk Tea" class="drink-img" />
+              Oolong Milk Tea<br><span class="price">Rs 170</span>
+            </button>
+          </div>
+          <div class="drink-category">
+            <h2>Fruit Tea</h2>
+            <button type="button" class="drink-btn" data-drink="Mango Green Tea" data-price="160" aria-label="Mango Green Tea, Rs 160">
+              <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80" alt="Mango Green Tea" class="drink-img" />
+              Mango Green Tea<br><span class="price">Rs 160</span>
+            </button>
+            <button type="button" class="drink-btn" data-drink="Lychee Oolong Tea" data-price="170" aria-label="Lychee Oolong Tea, Rs 170">
+              <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3c8b?auto=format&fit=crop&w=200&q=80" alt="Lychee Oolong Tea" class="drink-img" />
+              Lychee Oolong Tea<br><span class="price">Rs 170</span>
+            </button>
+            <button type="button" class="drink-btn" data-drink="Passionfruit Green Tea" data-price="160" aria-label="Passionfruit Green Tea, Rs 160">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Passionfruit Green Tea" class="drink-img" />
+              Passionfruit Green Tea<br><span class="price">Rs 160</span>
+            </button>
+          </div>
+          <div class="drink-category">
+            <h2>Specials</h2>
+            <button type="button" class="drink-btn" data-drink="Brown Sugar Milk" data-price="180" aria-label="Brown Sugar Milk, Rs 180">
+              <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=200&q=80" alt="Brown Sugar Milk" class="drink-img" />
+              Brown Sugar Milk<br><span class="price">Rs 180</span>
+            </button>
+            <button type="button" class="drink-btn" data-drink="Matcha Milk Tea" data-price="180" aria-label="Matcha Milk Tea, Rs 180">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" alt="Matcha Milk Tea" class="drink-img" />
+              Matcha Milk Tea<br><span class="price">Rs 180</span>
+            </button>
+          </div>
+        </section>
+        <input type="hidden" id="drink" name="drink" />
+      </div>
+
+      <div class="form-group">
+        <label for="size">Size:</label>
+        <select id="size">
+          <option value="Small">Small</option>
+          <option value="Medium">Medium (+Rs 20)</option>
+          <option value="Large">Large (+Rs 40)</option>
+        </select>
+      </div>
+
+      <div id="drink-customization"></div>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div id="summary"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
